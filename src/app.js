@@ -1,30 +1,6 @@
 import angular from 'angular';
 import '@uirouter/angularjs';
-
-
-function Router($stateProvider) {
-  $stateProvider
-    .state('about', {
-      templateUrl: './views/about.html',
-      url: '/about'
-    })
-    .state('home', {
-      templateUrl: './views/home.html',
-      url: '/home'
-    })
-    .state('itemIndex', {
-      templateUrl: './views/items/itemIndex.html',
-      url: '/items',
-      controller: function($scope, $http) {
-        $http({
-          method: 'GET',
-          url: '/api/fishes'
-        }).then(result => {
-          $scope.items = result.data;
-        });
-      }
-    });
-}
+import Router from './config/router';
 
 angular.module('wdi-project-3', ['ui.router'])
   .config(Router);
