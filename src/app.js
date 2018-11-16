@@ -1,13 +1,9 @@
 import angular from 'angular';
 import '@uirouter/angularjs';
 
-function Router($stateProvider, $urlRouterProvider) {
+function Router($stateProvider) {
   $stateProvider
     .state('home', {
       url: '/'
     });
-  $urlRouterProvider.otherwise('/');
 }
-
-angular.module('yourAppName', ['ui.router'])
-  .config(Router);
