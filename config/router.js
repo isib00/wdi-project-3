@@ -19,9 +19,12 @@ router.route('/register')
 
 router.route('/login')
   .post(authController.login);
+
 router.route('/items')
   .get(itemController.index);
 
+
+//Joe's itemIndex route
 
 
 module.exports = router;
