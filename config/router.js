@@ -12,7 +12,7 @@ const authController = require('../controllers/authController');
 //Joe's side
 
 
-//Rafa's side
+//Rafa's sides
 
 router.route('/register')
   .post(authController.register);
