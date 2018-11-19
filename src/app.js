@@ -23,6 +23,10 @@ function Router($stateProvider) {
           $scope.items = result.data;
         });
       }
+    })
+    .state('contact', {
+      templateUrl: './views/contact.html',
+      url: '/contact'
     });
 }
 
