@@ -1,4 +1,9 @@
 <h1>All the items<h1>
-<div ng-repeat="item in items">
+<div ng-repeat="item in allItems">
   <p>{{ item.itemName }}</p>
+  <div class="card-image">
+            <figure class="image">
+              <img ng-src="{{ item.imageUrl }}" alt="{{ item.itemName }}">
+            </figure>
+          </div>
 </div>

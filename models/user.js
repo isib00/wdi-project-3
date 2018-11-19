@@ -6,7 +6,7 @@ const userSchema = mongoose.Schema({
   email: String,
   password: String,
   // we could improve that with a virtual !!!!
-  itemsForSale: [String],
+  // itemsForSale: [String],
   // we could improve this with maps:
   location: String,
   // we might do that after we have reached MVP:
@@ -28,9 +28,9 @@ const userSchema = mongoose.Schema({
 //   foreignField: 'createdBy'
 // });
 
-userSchema.set('toJSON', {
-  virtuals: true
-});
+// userSchema.set('toJSON', {
+//   virtuals: true
+// });
 
 
 const userModel = mongoose.model('User', userSchema);
