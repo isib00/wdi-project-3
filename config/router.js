@@ -30,7 +30,7 @@ router.route('/users/:id')
 //Joe's side
 
 
-//Rafa's side
+//Rafa's sides
 
 router.route('/register')
   .post(authController.register);
