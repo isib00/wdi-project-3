@@ -325,3 +325,17 @@ body {
   height: 80px;
   font-size: 20px;
 }
+
+#home2 {
+    position: relative;
+    text-align: center;
+}
+
+.centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:transparent;
+    font-size: 140px;
+}
