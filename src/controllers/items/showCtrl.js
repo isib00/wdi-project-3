@@ -2,9 +2,9 @@ function showCtrl($state, $scope, $http) {
   $scope.comment = {};
   $http({
     method: 'GET',
-    url: `/api/fishes/${$state.params.id}`
+    url: `/api/items/${$state.params.id}`
   }).then(result => {
-    $scope.fish = result.data;
+    $scope.item = result.data;
   });
 }
 

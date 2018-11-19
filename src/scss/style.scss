@@ -263,3 +263,87 @@ input {
     transform: translate3d(0,0,0);
   }
 }
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.footer{
+  text-align: center;
+  background-color: white;
+}
+
+
+
+
+#index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: white;
+  img {
+    height: 400px;
+    width: 400px;
+  }
+}
+
+#titleindex {
+  text-align: center;
+  margin-top: 20px;
+  background-color: white;
+}
+
+body {
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+#itemtag {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+#seller {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.card {
+  margin-bottom: 50px;
+  margin-top: 25px;
+}
+
+#nav {
+  height: 80px;
+  font-size: 20px;
+}
+
+#home2 {
+    position: relative;
+    text-align: center;
+}
+
+.centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:transparent;
+    font-size: 100px;
+    color: white;
+}
+
+.centered2 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:transparent;
+    font-size: 30px;
+    color: white;
+}
