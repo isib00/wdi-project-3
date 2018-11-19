@@ -1,15 +1,15 @@
 
 <h1 class="title is-2" id="titleindex">All the items<h1>
 <section id="index">
-<div ng-repeat="item in allItems">
+<div ng-repeat="item in allItems" class="card">
 <a ui-sref="itemsShow({ id: item._id })">
-  <p class="subtitle">{{ item.itemName }}</p>
+  <p id="itemtag" class="subtitle">{{ item.itemName }}</p>
   <div class="card-image">
     <figure class="image">
         <img ng-src="{{ item.imageUrl }}" alt="{{ item.itemName }}">
     </figure>
   </div>
-    <p class="subtitle"> Sold by:{{ item.seller }}</p>
+    <p id="seller" class="subtitle"> Sold by: {{ item.seller }}</p>
 </div>
 </a>
 </section>
