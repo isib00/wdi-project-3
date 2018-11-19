@@ -17,7 +17,7 @@ function Router($urlRouterProvider, $stateProvider) {
       url: '/login',
       controller: loginCtrl
     })
-    .state('login', {
+    .state('register', {
       templateUrl: './views/register.html',
       url: '/register',
       controller: registerCtrl
