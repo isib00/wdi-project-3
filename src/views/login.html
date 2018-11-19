@@ -1,5 +1,5 @@
 <form ng-submit="handleLogin()">
-<div class="cont">
+<div class="cont" ng-class="{ 's--signup': isRegMode }">
   <div class="form sign-in">
     <h2>Welcome back,</h2>
     <label>
@@ -10,7 +10,6 @@
       <span>Password</span>
       <input name="password" type="password" ng-model="user.password"/>
     </label>
-    <!-- <p class="forgot-pass">Forgot password?</p> -->
     <button type="button" class="submit">Sign In</button>
   </div>
   <div class="sub-cont">
@@ -23,12 +22,12 @@
         <h2>One of us?</h2>
         <p>Got an account?, just sign in. We've missed you!</p>
       </div>
-      <div class="img__btn">
-        <span class="m--up">Sign Up</span>
+      <div class="img__btn" ng-click="switchMode()">
+        <span class="m--up">Sign Up!</span>
         <span class="m--in">Sign In</span>
       </div>
     </div>
-    <div class="form sign-up">
+    <div ng-if="!isRegMode" class="form sign-up">
       <h2>Ready to Rock@Roll!</h2>
       <label>
         <span>Name</span>
