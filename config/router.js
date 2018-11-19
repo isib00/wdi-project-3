@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const itemController = require('../controllers/itemController');
 const authController = require('../controllers/authController');
-const commentController = require('../controllers/commentController');
 const userController = require('../controllers/userController');
+const commentController = require('../controllers/commentController');
 
 
 // console.log('hey guys! this is the best group ever')
@@ -25,7 +25,6 @@ router.route('/items/:itemId/comments/:commentId')
 
 router.route('/users/:id')
   .get(userController.show);
-
 
 //Joe's side
 

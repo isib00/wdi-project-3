@@ -6,7 +6,7 @@ const userSchema = mongoose.Schema({
   email: String,
   password: String,
   // we could improve that with a virtual !!!!
-  itemsForSale: [String],
+  // itemsForSale: [String],
   // we could improve this with maps:
   location: String,
   // we might do that after we have reached MVP:
@@ -22,15 +22,15 @@ const userSchema = mongoose.Schema({
 });
 
 //Get all the items that a seller has uploaded:
-userSchema.virtual('itemsForSale', {
-  ref: 'Item',
-  localField: '_id',
-  foreignField: 'createdBy'
-});
+// userSchema.virtual('itemsForSale', {
+//   ref: 'Item',
+//   localField: '_id',
+//   foreignField: 'createdBy'
+// });
 
-userSchema.set('toJSON', {
-  virtuals: true
-});
+// userSchema.set('toJSON', {
+//   virtuals: true
+// });
 
 
 const userModel = mongoose.model('User', userSchema);
