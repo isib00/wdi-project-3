@@ -3,7 +3,7 @@ const env = require('../config/environment');
 const Item = require('../models/item');
 const User = require('../models/user');
 mongoose.connect(env.dbUri);
- // mongoose.connect(config.DB,{ useNewUrlParser: true }));
+
 
 const userIds = [
   '5be9860fcb16d525543ceda1',

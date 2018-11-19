@@ -5,7 +5,6 @@ const userController = require('../controllers/userController');
 const commentController = require('../controllers/commentController');
 
 
-// console.log('hey guys! this is the best group ever')
 
 
 //Anais's side
