@@ -1,59 +1,24 @@
-<!-- have commented out edit and delete functions -->
-  <div class="tile is-ancestor">
-    <div class="tile is-vertical is-8">
-      <div class="tile is-parent">
-        <article class="tile is-child notification is-info">
-          <div class="columns">
-            <h1 class="title is-2 column is-9">{{ item.itemName }}</h1>
-            <!-- <button class="button is-child column is-1" ui-sref="itemsEdit({ id: item._id })">✏️</button> -->
-            <!-- <button class="button is-danger column is-1" ng-click="handleDelete()">��</button> -->
-          </div>
-          <figure class="image is-4by3">
-            <img src="{{ item.imageUrl }}">
-          </figure>
-        </article>
-      </div>
-    </div>
-    <div class="tile is-parent">
-      <article class="tile is-child notification is-success">
-        <!-- <p>Uploaded by:<a ui-sref="showUser({ id: item.createdBy._id })">
-          {{ item.createdBy.username }}</a></p> -->
-        <div class="content">
-          <article class="media">
-            <figure class="media-left">
-              <p class="image is-64x64">
-                <img src="https://bulma.io/images/placeholders/128x128.png">
-              </p>
-            </figure>
-            <div class="media-content">
-              <div class="content">
-                <p>
-                  <strong>John Smith</strong> <small>@johnsmith</small> <small>DateAdded</small>
-                  <br>
-                </p>
-              </div>
-            </div>
-          </article>
-            <div class="content">
-              <small><p>{{ item.seller }}</p></small>
-              <small><p>{{ item.price }}</p></small>
-              <small><p>{{ item.rating }}</p></small>
-              <small><p>{{ item.updloadDate }}</p></small>
-              <small><p>{{ item.location }}</p></small>
-              <small><p>{{ item.sizes }}</p></small>
-              <small><p>{{ item.colour }}</p></small>
-              <!-- Content -->
-              <div ng-repeat="comment in item.comments">
-                <span style="font-weight: bold;">{{ comment.user.username }}</span>
-                <span>{{ comment.text }}</span>
-                <!-- <button  ng-if="comment.user._id === userId" class="delete-button" ng-click="deleteComment(comment)">x</button> -->
-              </div>
-              <!-- <form ng-submit="createComment()">
-                <input placeholder="comment..." type="text" ng-model="comment.text">
-                <button class="button">��</button>
-              </form> -->
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
+<div class="columns">
+  <div id="left" class="column is-7">
+    <h1 class="title" id="showtitle">{{ item.itemName }}</h1>
+    <img src="{{ item.imageUrl }}" id="showimg">
+  </div>
+  <div id="right" class="column is-5">
+    <span> A B O U T </span><span class="hide">ll</span><span>T H E</span><span class="hide">ll</span>   P I E C E</p>
+    <p><span>Sold by : </span><a>{{ item.seller }}</a></p>
+    <p><span>Price : </span>{{ item.price }} $</p>
+    <!-- <p><span>Rating: {</span>{ item.rating }}</p> -->
+    <!-- <p><span>Upload Date: </span>{{ item.updloadDate }}</p> -->
+    <p><span>Location : </span>{{ item.location }}</p>
+    <p><span>Size : </span>{{ item.sizes }}</p>
+    <p><span>Colour : </span>{{ item.colour }}</p>
+
+<div id="commentsshow" >
+  <p id="commentstitle">C O M M E N T S</p>
+  <div ng-repeat="comment in item.comments">
+    <span style="font-weight: bold;">{{ comment.user.username }} : </span>
+    <span>{{ comment.text }}</span>
+  </div>
+</div>
+</div>
+</div>

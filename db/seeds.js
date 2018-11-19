@@ -66,8 +66,8 @@ const itemData = [
     price: 80,
     uploadDate: 16/11/18,
     location: 'Aldgate East',
-    size: '6',
-    colour: 'white',
+    sizes: '6',
+    colour: 'White',
     //Users can comment on items
     comments: [
       {
@@ -86,8 +86,8 @@ const itemData = [
     price: 1900,
     uploadDate: 16/11/18,
     location: 'Chelsea',
-    size: 'medium',
-    colour: 'red',
+    sizes: 'M',
+    colour: 'Red',
     //Users can comment on items
     comments: [
       {
@@ -106,7 +106,7 @@ const itemData = [
     price: 1000,
     uploadDate: 16/11/18,
     location: 'Mayfair',
-    size: 'large',
+    sizes: 'L',
     colour: 'Grey',
     comments: [
       {
