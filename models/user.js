@@ -22,15 +22,15 @@ const userSchema = mongoose.Schema({
 });
 
 //Get all the items that a seller has uploaded:
-// userSchema.virtual('itemsForSale', {
-//   ref: 'Item',
-//   localField: '_id',
-//   foreignField: 'createdBy'
-// });
+userSchema.virtual('itemsForSale', {
+  ref: 'Item',
+  localField: '_id',
+  foreignField: 'createdBy'
+});
 
-// userSchema.set('toJSON', {
-//   virtuals: true
-// });
+userSchema.set('toJSON', {
+  virtuals: true
+});
 
 
 const userModel = mongoose.model('User', userSchema);

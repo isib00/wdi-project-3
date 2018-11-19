@@ -4,6 +4,7 @@ import registerCtrl from '../controllers/registerCtrl';
 import itemsEditCtrl from '../controllers/items/editCtrl';
 import itemsNewCtrl from '../controllers/items/newCtrl';
 import itemsShowCtrl from '../controllers/items/showCtrl';
+import userController from '../controllers/users/showController';
 
 
 
@@ -52,6 +53,11 @@ function Router($urlRouterProvider, $stateProvider) {
       url: '/items/:id/edit',
       controller: itemsEditCtrl
       // resolve: { secureRoute }
+    })
+    .state('userShow', {
+      templateUrl: './views/users/userShow.html',
+      url: '/users/:id',
+      controller: userController
     });
   $urlRouterProvider.otherwise('/');
 }

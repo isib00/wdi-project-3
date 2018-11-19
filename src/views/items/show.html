@@ -5,7 +5,7 @@
   </div>
   <div id="right" class="column is-5">
     <span> A B O U T </span><span class="hide">ll</span><span>T H E</span><span class="hide">ll</span>   P I E C E</p>
-    <p><span>Sold by : </span><a>{{ item.seller }}</a></p>
+    <p><span>Sold by : </span><a ui-sref="userShow({ id: item.createdBy._id})"">{{ item.seller }}</a></p>
     <p><span>Price : </span>{{ item.price }} $</p>
     <!-- <p><span>Rating: {</span>{ item.rating }}</p> -->
     <!-- <p><span>Upload Date: </span>{{ item.updloadDate }}</p> -->
