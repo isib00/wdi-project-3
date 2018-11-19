@@ -12,6 +12,10 @@ function Router($urlRouterProvider, $stateProvider) {
       templateUrl: './views/home.html',
       url: '/'
     })
+    .state('contatc', {
+      templateUrl: './views/contact.html',
+      url: '/contact'
+    })
     .state('login', {
       templateUrl: './views/login.html',
       url: '/login',
