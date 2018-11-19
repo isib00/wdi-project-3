@@ -1,8 +1,9 @@
-import itemsIndexCtrl from '../controllers/items/indexCtrl';
+import indexCtrl from '../controllers/items/indexCtrl';
 import loginCtrl from '../controllers/loginCtrl';
 import registerCtrl from '../controllers/registerCtrl';
-
-
+import itemsEditCtrl from '../controllers/items/editCtrl';
+import itemsNewCtrl from '../controllers/items/newCtrl';
+import itemsShowCtrl from '../controllers/items/showCtrl';
 
 
 
@@ -11,6 +12,14 @@ function Router($urlRouterProvider, $stateProvider) {
     .state('home', {
       templateUrl: './views/home.html',
       url: '/'
+    })
+    .state('about', {
+      templateUrl: './views/about.html',
+      url: '/about'
+    })
+    .state('contact', {
+      templateUrl: './views/contact.html',
+      url: '/contact'
     })
     .state('login', {
       templateUrl: './views/login.html',
@@ -23,12 +32,27 @@ function Router($urlRouterProvider, $stateProvider) {
       controller: registerCtrl
     })
     .state('itemsIndex', {
-      templateUrl: './views/items/index.html',
+      templateUrl: './views/items/itemIndex.html',
       url: '/items',
-      controller: itemsIndexCtrl
+      controller: indexCtrl
+    })
+    .state('itemsShow', {
+      templateUrl: './views/items/show.html',
+      url: '/items/:id',
+      controller: itemsShowCtrl
+    })
+    .state('itemsNew', {
+      url: '/items/new',
+      templateUrl: './views/items/new.html',
+      controller: itemsNewCtrl
+      // resolve: { secureRoute }
+    })
+    .state('itemsEdit', {
+      templateUrl: './views/items/edit.html',
+      url: '/items/:id/edit',
+      controller: itemsEditCtrl
+      // resolve: { secureRoute }
     });
-  // NOTE: Redirect to home whenever the url is invalid.
-  //       This also adds the #! for us if it's not there!
   $urlRouterProvider.otherwise('/');
 }
 

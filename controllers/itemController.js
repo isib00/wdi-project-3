@@ -5,7 +5,37 @@ function indexRoute(req, res, next) {
     .catch(next);
 }
 
-module.exports = {
-  index: indexRoute
+function showRoute(req, res, next) {
+  Item.findById(req.params.id)
+    .populate('createdBy comments.user')
+    .then(item => res.json(item))
+    .catch(next);
+}
 
+function createRoute(req, res, next) {
+  Item.create(req.body)
+    .then(item => res.json(item))
+    .catch(next);
+}
+
+function updateRoute(req, res, next) {
+  Item.findById(req.params.id)
+    .then(item => item.set(req.body))
+    .then(item => item.save())
+    .then(item => res.json(item))
+    .catch(next);
+}
+
+function deleteRoute(req, res, next) {
+  Item.findByIdAndDelete(req.params.id)
+    .then(() => res.sendStatus(204))
+    .catch(next);
+}
+
+module.exports = {
+  index: indexRoute,
+  show: showRoute,
+  create: createRoute,
+  update: updateRoute,
+  delete: deleteRoute
 };
