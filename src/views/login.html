@@ -12,7 +12,7 @@
     </label>
     <button type="button" class="submit">Sign In</button>
   </div>
-  <div class="sub-cont">
+  <div class="sub-cont" ng-class="{ 's--signup': !isRegMode }">
     <div class="img">
       <div class="img__text m--up">
         <h2>New here?</h2>
@@ -27,7 +27,7 @@
         <span class="m--in">Sign In</span>
       </div>
     </div>
-    <div ng-if="!isRegMode" class="form sign-up">
+    <div class="form sign-up">
       <h2>Ready to Rock@Roll!</h2>
       <label>
         <span>Name</span>
@@ -46,6 +46,24 @@
   </div>
 </div>
 </form>
+
+<!-- <form ng-submit="handleLogin()">
+  <div>
+    <label for="username">Username:</label>
+    <input name="username" ng-model="user.username">
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input name="email" ng-model="user.email">
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input name="password" type="password" ng-model="user.password">
+  </div>
+  <div >
+    <button>Submit</button>
+  </div>
+</form> -->
 
 <!-- //js
 document.querySelector('.img__btn').addEventListener('click', function() {

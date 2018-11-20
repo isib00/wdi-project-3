@@ -1,9 +1,9 @@
 function loginCtrl($scope, $state) {
   $scope.isRegMode = false;
 
-  $scope.test = function() {
-    console.log('Hello');
-  }
+  // $scope.test = function() {
+  //   console.log('Hello');
+  // };
 
   $scope.switchMode = function(){
     // console.log('clicked change mode');
