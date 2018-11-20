@@ -32,7 +32,7 @@ input, button {
   width: 900px;
   height: 550px;
   margin: 0 auto 100px;
-  background: green;
+  background: #00BFFF;
       margin-top: 45px;
       border-radius: 110px;
 }
@@ -53,7 +53,7 @@ input, button {
   width: 900px;
   height: 100%;
   padding-left: 260px;
-  background: green;
+  background: #00BFFF;
   transition: transform 1.2s ease-in-out;
 
   @include signUpActive {
@@ -101,7 +101,7 @@ button {
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.3);
   }
 
   @include signUpActive {
@@ -199,11 +199,23 @@ button {
     }
   }
 }
+.img__text h2 {
+    margin-bottom: 10px;
+    font-weight: 900;
+    color: white;
+}
 
 h2 {
   width: 100%;
   font-size: 26px;
   text-align: center;
+  margin-bottom: 20px;
+font-weight: 900;
+color: black;
+}
+
+#img {
+  border-radius: 50px;
 }
 
 label {
@@ -240,7 +252,7 @@ input {
   margin-top: 40px;
   margin-bottom: 20px;
   // background: #d4af7a;
-  background-color: red;
+  background-color: black;
   text-transform: uppercase;
 }
 
