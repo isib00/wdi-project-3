@@ -1,3 +1,4 @@
+
 function mainCtrl($scope, $auth, $state) {
   $scope.isAuthenticated = function() {
     if ($auth.isAuthenticated()) {
@@ -12,6 +13,8 @@ function mainCtrl($scope, $auth, $state) {
     $auth.logout()
       .then(() => $state.go('home'));
   };
+  
+
 
 }
 

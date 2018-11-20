@@ -5,6 +5,15 @@ function showController($scope, $http, $state) {
   }). then(result => {
     $scope.user = result.data;
   });
+  $scope.handleDelete = function(itemId) {
+    console.log('handleDelete is running');
+    console.log('this is item._id', itemId);
+
+    $http({
+      method: 'DELETE',
+      url: `/api/items/${itemId}`
+    }).then(() => $state.reload());
+  };
 }
 
 export default showController;
