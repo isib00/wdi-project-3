@@ -12,6 +12,7 @@ function mainCtrl($scope, $auth, $state) {
     $auth.logout()
       .then(() => $state.go('home'));
   };
+
 }
 
 export default mainCtrl;

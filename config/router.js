@@ -3,21 +3,45 @@ const itemController = require('../controllers/itemController');
 const authController = require('../controllers/authController');
 const userController = require('../controllers/userController');
 const commentController = require('../controllers/commentController');
+const jwt = require('jsonwebtoken');
+
+function secureRoute(req, res, next) {
+  if (!req.headers.authorization)
+    res.status(401).json({ message: 'unauthorised'});
+  // Remove the Bearer bit from the start of the header:
+  const token = req.headers.authorization.replace('Bearer ', '');
+  // Check the token matches our secret with jwt.verify.
+  // 3 arguments: token, secret, callback function which runs if
+  // the token checks out
+  jwt.verify(token, 'jafais', function(err) {
+    // If err is undefined, we know the token checked out.
+    // Otherwise it was bad.
+    if (err) {
+      // The token was bad
+      res.status(401).json({ message: 'Unauthorised!' });
+    } else {
+      // The token was good. Continue on our journey...
+      // Get the user ID out of the token and store it!
+      req.tokenUserId = jwt.decode(token).sub;
+      next();
+    }
+  });
+}
 
 //Anais's side
 router.route('/items')
-  .post( itemController.create);
+  .post( secureRoute, itemController.create);
 
 router.route('/items/:id')
   .get(itemController.show)
-  .put( itemController.update)
-  .delete( itemController.delete);
+  .put( secureRoute, itemController.update)
+  .delete( secureRoute, itemController.delete);
 
 router.route('/items/:itemId/comments')
-  .post( commentController.create);
+  .post( secureRoute, commentController.create);
 
 router.route('/items/:itemId/comments/:commentId')
-  .delete( commentController.delete);
+  .delete( secureRoute, commentController.delete);
 
 router.route('/users/:id')
   .get(userController.show);

@@ -12,13 +12,26 @@
     <p><span>Location : </span>{{ item.location }}</p>
     <p><span>Size : </span>{{ item.sizes }}</p>
     <p><span>Colour : </span>{{ item.colour }}</p>
+    <br>
+    <button class="button is-rounded" ui-sref="itemsEdit({ id: item._id })">Edit</button>
+  <button class="button is-rounded" ng-click="handleDelete()">DELETE</button>
 
 <div id="commentsshow" >
   <p id="commentstitle">C O M M E N T S</p>
   <div ng-repeat="comment in item.comments">
-    <span style="font-weight: bold;">{{ comment.user.username }} : </span>
+    <span style="font-weight: bold;">{{ comment.user.username }}:</span>
     <span>{{ comment.text }}</span>
+    <!-- need auth so only the user can delete thier comment -->
+    <!-- ng-if="comment.user._id === userId" -->
+    <button class="delete-button" ng-click="deleteComment(comment)">🗑</button>
   </div>
+</div>
+<div class="comments">
+
+  <form ng-submit="createComment()">
+    <input type="text" ng-model="comment.text">
+    <button class="button">💬</button>
+  </form>
 </div>
 </div>
 </div>

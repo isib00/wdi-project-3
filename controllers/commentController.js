@@ -4,6 +4,7 @@ function createRoute(req, res, next) {
     .then(item => {
       req.body.user = req.tokenUserId;
       item.comments.push(req.body);
+      console.log('req.body', req.body);
       return item.save();
     })
     .then(item => Item.populate(item, 'createdBy comments.user'))

@@ -1,0 +1,18 @@
+<div class="hero">
+<div class="hero-body">
+
+<h1 class="title is-1">Update your piece</h1>
+<form ng-submit="handleSubmit()" class="form" >
+  <input ng-model="item.itemName" placeholder="Name" class="input">
+  <input ng-model="item.imageUrl" placeholder="Image URL" class="input">
+  <input ng-model="item.seller" placeholder="Your Name" class="input">
+  <input ng-model="item.categories" placeholder="Possible Categories" class="input">
+  <input ng-model="item.price" placeholder="Price" type="number" min="0" class="input">
+  <input ng-model="item.uploadDate" placeholder="Today's Date" type="date" class="input">
+  <input ng-model="item.location" placeholder="Your Location" class="input">
+  <input ng-model="item.size" placeholder="Size" class="input">
+  <input ng-model="item.colour" placeholder="Colour" class="input">
+  <button class="button is-rounded">Update</button>
+</form>
+</div>
+</div>

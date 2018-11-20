@@ -1,12 +1,14 @@
 <div id="cde">
-<h1 class="title-is-1" id="username">Your Profile {{ user.username}}</h1>
+<h1 class="title-is-1" id="username">Your Profile {{ user.username }}</h1>
 <h3 id="jk">Your items for sale:</h3>
     <div id="abc" class="card">
   <div ng-repeat="item in user.itemsForSale">
     <h2 id="useritemname">
-    {{ item.itemName}}
+    {{ item.itemName }}
   </h2>
-  <img id="userimg" ng-src="{{ item.imageUrl}}" alt="{{ item.itemName}}">
+  <img id="userimg" ng-src="{{ item.imageUrl}}" alt="{{ item.itemName }}">
+  <button class="button is-rounded" ui-sref="itemsEdit({ id: item._id })">Edit</button>
+  <button class="button is-rounded" ng-click="handleDelete()">DELETE</button>
 </div>
 </div>
 </div>
