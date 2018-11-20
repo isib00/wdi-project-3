@@ -1,0 +1,7 @@
+<h1 class="title-is-1">{{ user.username}}</h1>
+<div ng-repeat="item in user.itemsForSale">
+  <h2>
+  {{ item.itemName}}
+</h2>
+<img ng-src="{{ item.imageUrl}}" alt="{{ item.itemName}}">
+</div>
