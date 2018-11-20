@@ -1,8 +1,7 @@
-function newCtrl($scope, $http, $state) {
+function newCtrl($scope, $http, $state, $auth) {
   $scope.item = {};
   $scope.handleSubmit = function() {
-    // console.log('$auth.getPayload is', $auth.getPayload());
-    // $scope.item.createdBy = $auth.getPayload().sub;
+    $scope.item.createdBy = $auth.getPayload().sub;
     $http({
       method: 'POST',
       url: '/api/items',
