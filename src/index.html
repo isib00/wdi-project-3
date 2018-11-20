@@ -19,6 +19,7 @@
       <a ng-if="!isAuthenticated()" ui-sref="register" class="navbar-item column-is-2">Register</a>
       <a ng-if="!isAuthenticated()" ui-sref="login" class="navbar-item column-is-2">Log in</a>
       <a ng-if="isAuthenticated()" class="navbar-item" ng-click="handleLogout()" >Log out {{ username }}</a>
+      <a ng-if="isAuthenticated()" ui-sref="userShow({id: userId })" class="navbar-item column-is-1" >Your Profile</a>
     </nav>
   </div>
     <!-- <flash-message></flash-message> -->
