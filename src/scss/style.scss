@@ -4,11 +4,11 @@
   padding: 0;
 }
 
-body {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  // background: #ededed;
-  background-color: lightblue;
-}
+// body {
+//   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+//   // background: #ededed;
+//   background-color: lightblue;
+// }
 
 input, button {
   border: none;
@@ -32,7 +32,7 @@ input, button {
   width: 900px;
   height: 550px;
   margin: 0 auto 100px;
-  background: #fff;
+  background: green;
       margin-top: 45px;
       border-radius: 110px;
 }
@@ -53,7 +53,7 @@ input, button {
   width: 900px;
   height: 100%;
   padding-left: 260px;
-  background: #fff;
+  background: green;
   transition: transform 1.2s ease-in-out;
 
   @include signUpActive {
@@ -389,4 +389,14 @@ body {
   margin-right: 200px;
   margin-top: 60px;
   margin-bottom: 40px;
+}
+
+#aa{
+  color: white;
+}
+
+#contact {
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 80px;
 }
