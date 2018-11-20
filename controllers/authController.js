@@ -27,7 +27,7 @@ function login(req, res, next) {
 function register(req, res, next) {
   User.create(req.body)
     .then(user => res.json({
-      message: `Welcome to Orca, ${user}, password: ${req.body.password}, email: ${req.body.email}`
+      message: `Welcome to Orca, ${user.username}, password: ${req.body.password}, email: ${req.body.email}`
     }))
     .catch(next);
 }
