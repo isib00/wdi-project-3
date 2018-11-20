@@ -8,7 +8,7 @@
 
     <title>Orca</title>
   </head>
-  <body>
+  <body ng-controller="mainCtrl">
     <div>
     <nav  id="nav" class="navbar is-centered columns">
       <a ui-sref="home" class="navbar-item column-is-2">Home</a>
@@ -16,8 +16,9 @@
       <a ui-sref="contact" class="navbar-item column-is-2">Contact</a>
       <a ui-sref="about" class="navbar-item column-is-2">About</a>
 
-      <a ui-sref="register" class="navbar-item column-is-2">Register</a>
-      <a ui-sref="login" class="navbar-item column-is-2">Log in</a>
+      <a ng-if="!isAuthenticated()" ui-sref="register" class="navbar-item column-is-2">Register</a>
+      <a ng-if="!isAuthenticated()" ui-sref="login" class="navbar-item column-is-2">Log in</a>
+      <a ng-if="isAuthenticated()" class="navbar-item" ng-click="handleLogout()" >Log out {{ username }}</a>
     </nav>
   </div>
     <!-- <flash-message></flash-message> -->
