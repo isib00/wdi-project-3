@@ -1,59 +1,12 @@
-const mongoose = require('mongoose');
-const env = require('../config/environment');
-const Item = require('../models/item');
-const User = require('../models/user');
-mongoose.connect(env.dbUri);
+/* global api, expect, describe, it, beforeEach */
 
 
+const Item = require('../../models/item');
 const userIds = [
   '5be9860fcb16d525543ceda1',
   '5be9860fcb16d525543ceda2',
   '5be9860fcb16d525543ceda3'
 ];
-
-const userData = [
-  {
-    _id: userIds[1],
-    username: 'Joe',
-    email: 'joe@joe',
-    password: 'pass',
-    itemsForSale: ['Nike Air Force 1'],
-    location: 'Aldgate East',
-    comments: [
-      {
-        text: 'Best seller ever!',
-        user: userIds[0]
-      }
-    ]
-  }, {
-    _id: userIds[0],
-    username: 'Rafa',
-    email: 'rafa@rafa',
-    password: 'pass',
-    itemsForSale: ['Supreme Sweater'],
-    location: 'Mayfair',
-    comments: [
-      {
-        text: 'Nice guy!',
-        user: userIds[2]
-      }
-    ]
-  }, {
-    _id: userIds[2],
-    username: 'Anaïs',
-    email: 'anais@anais',
-    password: 'pass',
-    itemsForSale: ['Céline Handbag'],
-    location: 'Chelsea',
-    comments: [
-      {
-        text: 'I love her style!',
-        user: userIds[0]
-      }
-    ]
-  }
-];
-
 
 const itemData = [
   {
@@ -66,8 +19,8 @@ const itemData = [
     price: 80,
     uploadDate: 16/11/18,
     location: 'Aldgate East',
-    sizes: '6',
-    colour: 'White',
+    size: '6',
+    colour: 'white',
     //Users can comment on items
     comments: [
       {
@@ -86,8 +39,8 @@ const itemData = [
     price: 1900,
     uploadDate: 16/11/18,
     location: 'Chelsea',
-    sizes: 'M',
-    colour: 'Red',
+    size: 'medium',
+    colour: 'red',
     //Users can comment on items
     comments: [
       {
@@ -106,7 +59,7 @@ const itemData = [
     price: 1000,
     uploadDate: 16/11/18,
     location: 'Mayfair',
-    sizes: 'L',
+    size: 'large',
     colour: 'Grey',
     comments: [
       {
@@ -115,23 +68,22 @@ const itemData = [
       }
     ]
   }
-
-
 ];
 
+describe('Items INDEX', () => {
 
-//close to connection for the 3 types of models created and create items,
-// usres, sellers:
-Item.collection.drop();
-User.collection.drop();
+  beforeEach(done => {
+    Item.remove({})
+      .then(() => Item.create(itemData))
+      .then(() => done());
+  });
 
-
-Item.create(itemData)
-  .then(items => {
-    console.log(`Created ${items.length} items`);
-    User.create(userData)
-      .then(users => {
-        console.log(`Created ${users.length} users`);
-        mongoose.connection.close();
+  it('should return a 200 response', done => {
+    api.get('/api/items')
+      .end((err, res) => {
+        expect(res.status).to.eq(200);
+        done();
       });
   });
+
+});
