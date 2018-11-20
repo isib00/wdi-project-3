@@ -7,6 +7,8 @@
     {{ item.itemName }}
   </h2>
   <img id="userimg" ng-src="{{ item.imageUrl}}" alt="{{ item.itemName }}">
+  <button class="button is-rounded" ui-sref="itemsEdit({ id: item._id })">Edit</button>
+  <button class="button is-rounded" ng-click="handleDelete()">DELETE</button>
 </div>
 </div>
 </div>

@@ -34,10 +34,8 @@ function showCtrl($state, $scope, $http) {
     $http({
       method: 'DELETE',
       url: `/api/items/${$scope.item._id}`
-    }).then(() => $state.go('itemIndex'));
+    }).then(() => $state.go('itemsIndex'));
   };
 }
-
-
 
 export default showCtrl;

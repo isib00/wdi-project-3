@@ -12,6 +12,9 @@
     <p><span>Location : </span>{{ item.location }}</p>
     <p><span>Size : </span>{{ item.sizes }}</p>
     <p><span>Colour : </span>{{ item.colour }}</p>
+    <br>
+    <button class="button is-rounded" ui-sref="itemsEdit({ id: item._id })">Edit</button>
+  <button class="button is-rounded" ng-click="handleDelete()">DELETE</button>
 
 <div id="commentsshow" >
   <p id="commentstitle">C O M M E N T S</p>
