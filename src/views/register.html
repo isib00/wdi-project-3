@@ -1,4 +1,4 @@
-<form>
+<form ng-submit="handleRegister()">
   <div>
     <label for="username">Username:</label>
     <input name="username" ng-model="user.username">
@@ -11,7 +11,5 @@
     <label for="password">Password:</label>
     <input name="password" type="password" ng-model="user.password">
   </div>
-  <div >
-    <button>Submit</button>
-  </div>
+    <button id="submitButton">Submit</button>
 </form>

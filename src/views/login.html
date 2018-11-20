@@ -1,4 +1,4 @@
-<form ng-submit="handleLogin()">
+<!-- <form ng-submit="handleLogin()">
 <div class="cont">
   <div class="form sign-in">
     <h2>Welcome back,</h2>
@@ -11,7 +11,7 @@
       <input name="password" type="password" ng-model="user.password"/>
     </label>
     <!-- <p class="forgot-pass">Forgot password?</p> -->
-    <button type="button" class="submit">Sign In</button>
+    <!-- <button type="button" class="submit">Sign In</button>
   </div>
   <div class="sub-cont">
     <div class="img">
@@ -46,6 +46,14 @@
     </div>
   </div>
 </div>
+</form> -->
+
+<form ng-submit="handleLogin()">
+  <label for="email">Email:</label>
+  <input name="email" ng-model="user.email">
+  <label for="password">Password:</label>
+  <input name="password" type="password" ng-model="user.password">
+  <button class="button">Submit</button>
 </form>
 
 <!-- //js
