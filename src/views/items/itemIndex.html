@@ -1,5 +1,8 @@
 
 <h1 class="title is-2" id="titleindex">All the items<h1>
+  <div ng-if="isAuthenticated()">
+  <p>Welcome back {{ username }}</p>
+</div>
 <section id="index">
 <div ng-repeat="item in allItems" class="card">
 <a ui-sref="itemsShow({ id: item._id })">

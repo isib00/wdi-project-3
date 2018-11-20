@@ -8,20 +8,19 @@
 
     <title>Orca</title>
   </head>
-  <body>
+  <body ng-controller="mainCtrl">
     <div>
     <nav  id="nav" class="navbar is-centered columns">
       <a ui-sref="home" class="navbar-item column-is-2">Home</a>
       <a ui-sref="itemsIndex" class="navbar-item column-is-2">Items</a>
       <a ui-sref="contact" class="navbar-item column-is-2">Contact</a>
       <a ui-sref="about" class="navbar-item column-is-2">About</a>
-
-      <a ui-sref="register" class="navbar-item column-is-2">Register</a>
-      <a ui-sref="login" class="navbar-item column-is-1">Log in</a>
-      <a ui-sref="itemsNew" class="navbar-item column-is-1">Upload an item</a>
+      <a ui-sref="itemsNew" class="navbar-item column-is-2">Upload an item</a>
+      <a ng-if="!isAuthenticated()" ui-sref="register" class="navbar-item column-is-1">Register</a>
+      <a ng-if="!isAuthenticated()" ui-sref="login" class="navbar-item column-is-1">Log in</a>
+      <a ng-if="isAuthenticated()" class="navbar-item column-is-2" ng-click="handleLogout()" >Log out {{ user.username }}</a>
     </nav>
   </div>
-    <!-- <flash-message></flash-message> -->
     <div ui-view></div>
     <footer class="footer is-centered" id="footer">
       Made with ❤️ by Jafais

@@ -1,5 +1,10 @@
+
+<!-- <form ng-submit="handleLogin()">
+<div class="cont">
+=======
 <form ng-submit="handleLogin()">
 <div class="cont" ng-class="{ 's--signup': isRegMode }">
+>>>>>>> development
   <div class="form sign-in">
     <h2>Welcome back,</h2>
     <label>
@@ -10,7 +15,12 @@
       <span>Password</span>
       <input name="password" type="password" ng-model="user.password"/>
     </label>
+<<<<<<< HEAD
+    <!-- <p class="forgot-pass">Forgot password?</p> -->
+    <!-- <button type="button" class="submit">Sign In</button>
+=======
     <button type="button" class="submit">Sign In</button>
+>>>>>>> development
   </div>
   <div class="sub-cont" ng-class="{ 's--signup': !isRegMode }">
     <div class="img">
@@ -45,6 +55,14 @@
     </div>
   </div>
 </div>
+</form> -->
+
+<form ng-submit="handleLogin()">
+  <label for="email">Email:</label>
+  <input name="email" ng-model="user.email">
+  <label for="password">Password:</label>
+  <input name="password" type="password" ng-model="user.password">
+  <button class="button">Submit</button>
 </form>
 
 <!-- <form ng-submit="handleLogin()">
