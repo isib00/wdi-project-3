@@ -20,8 +20,8 @@
       <a ng-if="!isAuthenticated()" ui-sref="login" class="navbar-item column-is-1">Log in</a>
       <a ng-if="isAuthenticated()" class="navbar-item column-is-1" ng-click="handleLogout()" >Log out {{ username }}</a>
       <a ng-if="isAuthenticated()" ui-sref="userShow({id: userId })" class="navbar-item column-is-1" >Your Profile</a>
-
     </nav>
+    <flash-message id="flashMessage"></flash-message>
   </div>
     <div ui-view></div>
     <footer class="footer is-centered" id="footer">
