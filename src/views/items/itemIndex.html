@@ -1,49 +1,24 @@
 
-<h1 class="title is-2" id="titleindex">All the items<h1>
+<h1>Welcome back {{ username }}<h1>
   <div ng-if="isAuthenticated()">
-  <p>Welcome back {{ username }}</p>
+  <!-- <p>Welcome back {{ username }}</p> -->
 </div>
-<!-- <form ng-submit="handleFilterSubmit()">
-  <div class="wrap">
-     <div class="search">
-        <input ng-model="searchTerm" type="text" class="searchTerm" placeholder="What are you looking for?">
-        <button type="submit" class="searchButton">
-          <i class="fas fa-search"></i>
-       </button>
-     </div>
-  </div>
-</form>
-<section id="index">
-  <div class="columns is-multiline">
-<div ng-repeat="item in filteredItems" class="card">
-<a ui-sref="itemsShow({ id: item._id })">
-  <p id="itemtag" class="subtitle">{{ item.itemName }}</p>
-  <div class="card-image">
-    <figure class="image">
-        <img ng-src="{{ item.imageUrl }}" alt="{{ item.itemName }} {{ item.location }}">
-    </figure>
-  </div>
-    <p id="seller" class="subtitle"> Sold by: {{ item.seller }}</p>
-</div>
-</div>
-</a>
-</section> -->
-
 
 <section class="section">
   <!-- <h2 class="title is-2 has-text-centered">All items</h2> -->
     <div class="field has-addons is-grouped">
       <div class="control is-expanded">
-        <input type="text" class="input is-rounded" ng-model="$parent.searchBar">
+        <input id="input" placeholder="Search by anything you like..." type="text" class="input is-rounded" ng-model="$parent.searchBar">
       </div>
     </div>
+<p id="hot">Here's what's hot right now...</p>
 
   <div class="columns is-multiline">
-    <div ng-repeat="item in items | filter: searchBar" class="column is-4">
-      <a ui-sref="itemShow({ id: item._id })">
-        <h3 class="subtitle is-4">{{ item.itemName}}</h3>
+    <div ng-repeat="item in items | filter: searchBar" class="column is-2">
+      <a ui-sref="itemsShow({ id: item._id })">
+        <h3 id="pricetag" class="subtitle is-4">£{{ item.price}}</h3>
         <figure class="image">
-          <img ng-src="{{ item.imageUrl }}" alt="{{ item.itemName }} {{ item.location }}">
+          <img ng-src="{{ item.imageUrl }}" alt="{{ item.itemName }}">
         </figure>
       </a>
     </div>

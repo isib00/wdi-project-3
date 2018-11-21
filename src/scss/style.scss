@@ -1,211 +1,10 @@
 
-
-// *, *:before, *:after {
-//   box-sizing: border-box;
-//   margin: 0;
-//   padding: 0;
-// }
-//
-// // body {
-// //   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-// //   // background: #ededed;
-// //   background-color: lightblue;
-// // }
-//
-// input, button {
-//   border: none;
-//   outline: none;
-//   background: none;
-//   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-// }
-//
-//
-// // $diffRatio: ($contW - $imgW) / $contW;
-//
 @mixin signUpActive {
   .cont.s--signup & {
     @content;
   }
 }
-// //
-// // .cont {
-// //   overflow: hidden;
-// //   position: relative;
-// //   width: 900px;
-// //   height: 550px;
-// //   margin: 0 auto 100px;
-// //   background: #00BFFF;
-// //       margin-top: 45px;
-// //       border-radius: 110px;
-// // }
-//
-// .form {
-//   position: relative;
-//   width: 640px;
-//   height: 100%;
-//   transition: transform 1.2s ease-in-out;
-//   padding: 50px 30px 0;
-// }
-//
-// .sub-cont {
-//   overflow: hidden;
-//   position: absolute;
-//   left: 640px;
-//   top: 0;
-//   width: 900px;
-//   height: 100%;
-//   padding-left: 260px;
-//   background: #00BFFF;
-//   transition: transform 1.2s ease-in-out;
-//
-//   @include signUpActive {
-//     transform: translate3d(640px * -1,0,0);
-//   }
-// }
-//
-// button {
-//   display: block;
-//   margin: 0 auto;
-//   width: 260px;
-//   height: 36px;
-//   border-radius: 30px;
-//   color: #fff;
-//   font-size: 15px;
-//   cursor: pointer;
-// }
-//
-// .img {
-//   overflow: hidden;
-//   z-index: 2;
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   width: 260px;
-//   height: 100%;
-//   padding-top: 360px;
-//
-//   &:before {
-//     content: '';
-//     position: absolute;
-//     right: 0;
-//     top: 0;
-//     width: 900px;
-//     height: 100%;
-//     background-image: url('https://s3-ap-southeast-1.amazonaws.com/akhayarmedia.com/wp-content/uploads/2018/08/03135045/buying-clothes-background.jpg');
-//     background-size: cover;
-//     transition: transform 1.2s ease-in-out;
-//   }
-//
-//   &:after {
-//     content: '';
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-//     width: 100%;
-//     height: 100%;
-//     background: rgba(0,0,0,0.3);
-//   }
-//
-//   @include signUpActive {
-//     &:before {
-//       transform: translate3d(640px,0,0);
-//     }
-//   }
-//
-//   &__text {
-//     z-index: 2;
-//     position: absolute;
-//     left: 0;
-//     top: 50px;
-//     width: 100%;
-//     padding: 0 20px;
-//     text-align: center;
-//     color: #fff;
-//     transition: transform 1.2s ease-in-out;
-//
-//     h2 {
-//       margin-bottom: 10px;
-//       font-weight: normal;
-//     }
-//
-//     p {
-//       font-size: 14px;
-//       line-height: 1.5;
-//     }
-//
-//     &.m--up {
-//
-//       @include signUpActive {
-//         transform: translateX(260px * 2);
-//       }
-//     }
-//
-//     &.m--in {
-//       transform: translateX(260px * -2);
-//
-//       @include signUpActive {
-//         transform: translateX(0);
-//       }
-//     }
-//   }
-//
-//   &__btn {
-//     overflow: hidden;
-//     z-index: 2;
-//     position: relative;
-//     width: 100px;
-//     height: 36px;
-//     margin: 0 auto;
-//     background: transparent;
-//     color: #fff;
-//     text-transform: uppercase;
-//     font-size: 15px;
-//     cursor: pointer;
-//
-//     &:after {
-//       content: '';
-//       z-index: 2;
-//       position: absolute;
-//       left: 0;
-//       top: 0;
-//       width: 100%;
-//       height: 100%;
-//       border: 2px solid #fff;
-//       border-radius: 30px;
-//     }
-//
-//     span {
-//       position: absolute;
-//       left: 0;
-//       top: 0;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       width: 100%;
-//       height: 100%;
-//       transition: transform 1.2s;
-//
-//       &.m--in {
-//         transform: translateY(36px * -2);
-//
-//         @include signUpActive {
-//           transform: translateY(0);
-//         }
-//       }
-//
-//       &.m--up {
-//         @include signUpActive {
-//           transform: translateY(36px * 2);
-//         }
-//       }
-//     }
-//   }
-// }
-// .img__text h2 {
-//     margin-bottom: 10px;
-//     font-weight: 900;
-//     color: white;
-// }
+
 
 h2 {
   width: 100%;
@@ -217,7 +16,7 @@ color: black;
 }
 
 #img {
-  border-radius: 50px;
+  border-radius: 300px;
 }
 
 label {
@@ -336,6 +135,7 @@ body {
   height: 80px;
   font-size: 20px;
   background-color: black;
+  margin-bottom: 0;
 }
 
 #home2 {
@@ -429,8 +229,6 @@ body {
 #userimg{
   height: 500px;
   width: 500px;
-
-
 }
 
 #abc{
@@ -453,7 +251,7 @@ justify-content: center;
 
 #flashMessage {
   text-align: center;
-
+}
 .searchTerm {
   width: 60%;
 margin-left: 286px;
@@ -524,18 +322,68 @@ margin-left: -49px;
   }
 }
 #h1 {
-  font-family: 'Russo One', sans-serif;
+  // font-family: 'Russo One', sans-serif;
   font-size: 9.5em;
-      margin-top: 100px;
+  margin-top: 100px;
   text-transform: uppercase;
 }
 #marginado {
-      margin-right: 20px;
+  margin-right: 20px;
 }
 .navbar-item {
-margin-top: 10px;
-  color: white;
+  margin-top: 10px;
+  color: #1b99c2;
+      font-weight: 900;
 }
-#letter {
-  animation: type 4s steps(60, end);
+.image img {
+    display: block;
+    height: auto;
+    width: 80%;
+    /* margin-top: 23px; */
+    margin-left: 20px;
+    margin-right: 20px;
+        border-radius: 92px;
+  }
+
+#pricetag {
+    margin-bottom: 1px;
+    font-size: 16px;
+    margin-top: 45px;
+    font-weight: 900;
+        margin-left: 89px;
+}
+#input{
+width: 50%;
+margin-left: 350px;
+border-radius: 20px;
+}
+
+#hot {
+  margin-left: 22px;
+margin-top: 51px;
+font-weight: 900;
+}
+
+#aboutimage {
+  margin-left: 200px;
+margin-top: 40px;
+border-radius: 100px;
+}
+
+#section {
+  margin-top: 70px;
+
+}
+
+#contact {
+      margin-top: 76px;
+      height: 100vh;
+}
+
+#body {
+  background-color: #1b99c2;
+}
+
+#p {
+  color: black;
 }
