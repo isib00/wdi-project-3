@@ -15,6 +15,7 @@ function mainCtrl($scope, $auth, $state, Flash) {
         $state.go('home');
       });
   };
+
 }
 
 export default mainCtrl;

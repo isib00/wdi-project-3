@@ -309,7 +309,7 @@ input {
 
 body {
   background-color: white;
-  font-family: 'Roboto', sans-serif;
+  // font-family: 'Roboto', sans-serif;
 }
 
 #itemtag {
@@ -447,6 +447,11 @@ justify-content: center;
   margin-bottom: 20px;
 }
 
+
 #flashMessage {
   text-align: center;
+
+.searchTerm {
+  width: 60%;
+margin-left: 286px;
 }

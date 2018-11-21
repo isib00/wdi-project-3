@@ -3,8 +3,19 @@
   <div ng-if="isAuthenticated()">
   <p>Welcome back {{ username }}</p>
 </div>
+<form ng-submit="handleFilterSubmit()">
+  <div class="wrap">
+     <div class="search">
+        <input ng-model="searchTerm" type="text" class="searchTerm" placeholder="What are you looking for?">
+        <button type="submit" class="searchButton">
+          <i class="fas fa-search"></i>
+       </button>
+     </div>
+  </div>
+</form>
 <section id="index">
-<div ng-repeat="item in allItems" class="card">
+  <div class="columns is-multiline">
+<div ng-repeat="item in filteredItems" class="card">
 <a ui-sref="itemsShow({ id: item._id })">
   <p id="itemtag" class="subtitle">{{ item.itemName }}</p>
   <div class="card-image">
@@ -14,5 +25,7 @@
   </div>
     <p id="seller" class="subtitle"> Sold by: {{ item.seller }}</p>
 </div>
+</div>
 </a>
+
 </section>
