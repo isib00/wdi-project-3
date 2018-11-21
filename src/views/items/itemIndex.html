@@ -20,7 +20,7 @@
   <p id="itemtag" class="subtitle">{{ item.itemName }}</p>
   <div class="card-image">
     <figure class="image">
-        <img ng-src="{{ item.imageUrl }}" alt="{{ item.itemName }}">
+        <img ng-src="{{ item.imageUrl }}" alt="{{ item.itemName }} {{ item.location }}">
     </figure>
   </div>
     <p id="seller" class="subtitle"> Sold by: {{ item.seller }}</p>

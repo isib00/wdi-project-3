@@ -27,7 +27,6 @@ function secureRoute(req, res, next) {
 
 
 router.route('/items')
-<<<<<<< HEAD
   .post(secureRoute, itemController.create);
 
 router.route('/items/:id')
@@ -39,9 +38,8 @@ router.route('/items/:itemId/comments')
   .post(secureRoute, commentController.create);
 
 router.route('/items/:itemId/comments/:commentId')
-  .delete(secureRoute, commentController.delete);
-=======
-  .post( secureRoute, itemController.create);
+  .delete(secureRoute, commentController.delete)
+  .post(secureRoute, itemController.create);
 
 router.route('/items/:id')
   .get(itemController.show)
@@ -53,7 +51,6 @@ router.route('/items/:itemId/comments')
 
 router.route('/items/:itemId/comments/:commentId')
   .delete( secureRoute, commentController.delete);
->>>>>>> development
 
 router.route('/users/:id')
   .get(userController.show);

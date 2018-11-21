@@ -5,7 +5,7 @@ const itemSchema = mongoose.Schema({
   imageUrl: String,
   seller: String,
   //assign an array of categories to every item
-  catgories: [String],
+  categories: [String],
   price: Number,
   // rating: Number ---> let us do that after we have reached MVP: it's complicated
   uploadDate: { type: Date, default: Date.now },
@@ -26,6 +26,20 @@ const itemSchema = mongoose.Schema({
   }
 });
 
+itemSchema.virtual('fullName')
+  .get(function() {
+    return `${this.itemName} (${this.seller})`;
+  });
+
+itemSchema.virtual('firstLetter')
+  .get(function() {
+    return this.itemName[0];
+  });
+
+// include virtuals in res.json
+itemSchema.set('toJSON', {
+  virtuals: true
+});
 
 const itemModel = mongoose.model('Item', itemSchema);
 module.exports = itemModel;
