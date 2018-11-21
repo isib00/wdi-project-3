@@ -1,5 +1,4 @@
-
-function mainCtrl($scope, $auth, $state) {
+function mainCtrl($scope, $auth, $state, Flash) {
   $scope.isAuthenticated = function() {
     if ($auth.isAuthenticated()) {
       $scope.username = $auth.getPayload().username;
@@ -11,10 +10,11 @@ function mainCtrl($scope, $auth, $state) {
   $scope.handleLogout = function() {
     console.log('logged out!');
     $auth.logout()
-      .then(() => $state.go('home'));
+      .then(() => {
+        Flash.create('danger', 'You\'ve logged out, see you later');
+        $state.go('home');
+      });
   };
-  
-
 
 }
 
