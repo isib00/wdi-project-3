@@ -1,5 +1,6 @@
 function loginCtrl($scope, $state, $auth, Flash) {
   $scope.handleLogin = function() {
+
     console.log('Logging in!');
     $auth.login($scope.user)
       .then(result => {
@@ -12,13 +13,15 @@ function loginCtrl($scope, $state, $auth, Flash) {
         // NOTE: If login fails, show whatever message comes from the server.
         //       Try logging in incorrectly, and check out the console log.
         console.log('err is', err);
+        // The first argument is the type, we have options:
+        // success, danger, warning, info
         Flash.create('warning', 'Login failed: ' + err.data.message);
       });
   };
 }
 
-// The first argument is the type:
-// success, danger, warning, info
+
+
 
 
 export default loginCtrl;

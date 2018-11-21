@@ -7,10 +7,11 @@ function indexCtrl($scope, $http) {
     $scope.filteredItems = $scope.allItems;
   });
   $scope.handleFilterSubmit = function() {
-    console.log('Filter form submitted!', $scope.searchTerm);
     $scope.filteredItems = $scope.allItems.filter(item =>
+
+      // console.log('Filter form submitted!', item.itemName, item.location);
       item.itemName.toLowerCase().startsWith($scope.searchTerm.toLowerCase())
-      // item.categories.toLowerCase().startsWith($scope.searchTerm);
+      // item.location.toLowerCase().startsWith($scope.searchTerm.toLowerCase());
     );
   };
 }

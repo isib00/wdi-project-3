@@ -32,9 +32,7 @@ userSchema.methods.validatePassword = function(attemptedPassword) {
 
 
 
-userSchema.set('toJSON', {
-  virtuals: true
-});
+
 
 
 //Get all the items that a seller has uploaded:
