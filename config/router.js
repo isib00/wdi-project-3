@@ -3,6 +3,7 @@ const itemController = require('../controllers/itemController');
 const authController = require('../controllers/authController');
 const userController = require('../controllers/userController');
 const commentController = require('../controllers/commentController');
+const likesController = require('../controllers/likesController');
 
 const env = require('../config/environment');
 const jwt = require('jsonwebtoken');
@@ -57,6 +58,11 @@ router.route('/users/:id')
 
 //Joe's side
 
+router.route('/items/:itemId/like')
+  .post(secureRoute, likesController.like);
+
+router.route('/items/:itemId/unlike')
+  .post(secureRoute, likesController.unlike);
 
 //Rafa's sides
 

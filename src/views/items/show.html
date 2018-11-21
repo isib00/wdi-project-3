@@ -12,6 +12,12 @@
     <p><span>Location : </span>{{ item.location }}</p>
     <p><span>Size : </span>{{ item.sizes }}</p>
     <p><span>Colour : </span>{{ item.colour }}</p>
+    <p><span>Likes : </span>{{ item.likeCount }}</p>
+    <div ng-if="isAuthenticated()">
+      <button ng-if="!liked()" ng-click="createLikes()">👍</button>
+      <button ng-if="liked()" ng-click="createUnlikes()">👎</button>
+    </div>
+
 
 
 
