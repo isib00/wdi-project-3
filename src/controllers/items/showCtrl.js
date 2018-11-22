@@ -25,11 +25,25 @@ function showCtrl($state, $scope, $http) {
     }).then(result => $scope.item = result.data);
   };
 
-  $scope.deleteme = function() {
-    console.log($scope.comment);
+  $scope.createLikes = function() {
+    console.log('liked');
+    // Flash.create('info', 'you liked this item');
+    $http({
+      method: 'POST',
+      url: `/api/items/${$state.params.id}/like`
+    });
   };
-
-
+  $scope.createUnlikes = function() {
+    console.log('unliked');
+    $http({
+      method: 'POST',
+      url: `/api/items/${$state.params.id}/unlike`
+    });
+  };
+  $scope.liked = function() {
+    return $scope.item.likes.includes($scope.userId);
+  };
 }
+
 
 export default showCtrl;

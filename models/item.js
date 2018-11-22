@@ -12,6 +12,7 @@ const itemSchema = mongoose.Schema({
   location: String,
   sizes: String,
   colour: String,
+  likes: [{ type: mongoose.Schema.ObjectId, ref: 'Users' }],
   //Users can comment on items
   comments: [
     {
@@ -29,6 +30,11 @@ const itemSchema = mongoose.Schema({
 itemSchema.virtual('fullName')
   .get(function() {
     return `${this.itemName} (${this.seller})`;
+  });
+
+itemSchema.virtual('likeCount')
+  .get(function() {
+    return this.likes.length;
   });
 
 itemSchema.virtual('firstLetter')
