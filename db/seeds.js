@@ -100,7 +100,7 @@ const itemData = [
     // Created by Rafa
     createdBy: userIds[0],
     itemName: 'Supreme Sweater',
-    imageUrl: 'hhttps://d2h1pu99sxkfvn.cloudfront.net/b0/2956179/447645345_HoWuSyhCY9/P8.jpg',
+    imageUrl: 'https://d2h1pu99sxkfvn.cloudfront.net/b0/2956179/447645345_HoWuSyhCY9/P8.jpg',
     seller: 'Rafa',
     categories: ['sweater, supreme, man, grey'],
     price: 1000,
@@ -297,7 +297,7 @@ const itemData = [
   {
     // Created by Rafa
     createdBy: userIds[0],
-    itemName: 'NASA Baseball Cap',
+    itemName: 'NASA Cap',
     imageUrl: 'https://d2h1pu99sxkfvn.cloudfront.net/b0/4690975/389452263_8KI4MbBiAD/P8.jpg',
     seller: 'Rafa',
     categories: ['accesories, cap, woman, men'],
