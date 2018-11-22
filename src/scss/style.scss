@@ -108,10 +108,10 @@ input {
   background-color: white;
 }
 
-body {
-  background-color: white;
-  // font-family: 'Roboto', sans-serif;
-}
+// body {
+//   background-color: white;
+//   // font-family: 'Roboto', sans-serif;
+// }
 
 #itemtag {
   text-align: center;
@@ -249,9 +249,9 @@ justify-content: center;
 }
 
 
-#flashMessage {
-  text-align: center;
-}
+// #flashMessage {
+//   text-align: center;
+// }
 
 .searchTerm {
   width: 60%;
@@ -309,7 +309,7 @@ margin-left: -49px;
   text-shadow: 0 0 .5em #1b99c2;;
   transition:
     color 1s ease-out,
-    text-shadow 1s ease-out;
+    text-shadow 5s ease-out;
 }
 
 .letter:hover {
@@ -367,8 +367,9 @@ font-weight: 900;
 
 #aboutimage {
   margin-left: 200px;
-margin-top: 40px;
-border-radius: 100px;
+  margin-top: 5px;
+  border-radius: 300px;
+  width: 80%;
 }
 
 #section {
@@ -378,13 +379,110 @@ border-radius: 100px;
 
 #contact {
       margin-top: 76px;
-      height: 100vh;
+      height: max-content;
 }
 
 #body {
-  background-color: #1b99c2;
+  background-color: #6eb6de;
+}
+#about {
+      height: 280vh;
+      margin-bottom: 0px;
 }
 
 #p {
   color: black;
+}
+
+#login {
+  margin-top: 130px;
+  height: 75vh;
+
+}
+.loginform {
+  border: 1px solid rgba(0,0,0,0.3);
+
+  margin: -150px 0 0 -150px;
+}
+
+#register {
+  width: fit-content;
+  width: 400px;
+  margin-left: 500px;
+  margin-top: 60px;
+  // border: 5px solid black;
+  border-radius: 20px;
+
+}
+
+#type {
+      margin-left: 124px;
+}
+
+.label1 {
+  margin-left: -58px;
+  color: #363636;
+display: block;
+font-size: 1rem;
+font-weight: 700;
+    margin-bottom: 10px;
+
+}
+
+#login2 {
+  margin-top: 130px;
+height: 75vh;
+}
+
+.button.is-link {
+    background-color: #3273dc;
+    border-color: transparent;
+    color: #fff;
+    width: 200px;
+  }
+
+#buttones {
+
+  margin-left: 42px;
+margin-top: 39px;
+}
+
+#buble {
+  margin-left: 60px;
+  height: 188px;
+  border-radius: 156px;
+  color: #363636;
+  font-weight: 700;
+
+}
+
+#icon {
+margin-top: 5px;
+}
+
+#borders {
+  border-radius: 20px;
+}
+
+.error {
+  font-size: small;
+  color: red;
+}
+.alert-container {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  opacity: 0.8;
+  transition: opacity 1.5s ease-out;
+}
+
+.alert {
+  position: absolute;
+}
+
+#margin {
+  margin-bottom: 10px;
 }
