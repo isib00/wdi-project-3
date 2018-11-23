@@ -44,21 +44,7 @@ describe('Items SHOW', () => {
       });
   });
 
-  it('should return a 200 response', done => {
-    api.get(`/api/items/${itemId}`)
-      .end((err, res) => {
-        expect(res.status).to.eq(200);
-        done();
-      });
-  });
 
-  it('should return an object', done => {
-    api.get(`/api/items/${itemId}`)
-      .end((err, res) => {
-        // res.body is the result you would see in Insomnia
-        expect(res.body).to.be.an('object');
-        done();
-      });
-  });
+
 
 });

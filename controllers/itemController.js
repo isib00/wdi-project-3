@@ -13,9 +13,13 @@ function showRoute(req, res, next) {
 }
 
 function createRoute(req, res, next) {
-  Item.create(req.body)
-    .then(item => res.json(item))
-    .catch(next);
+  if (!Object.keys(req.body).length) {
+    return res.status(401).json({ message: 'no data given' });
+  } else {
+    Item.create(req.body)
+      .then(item => res.json(item))
+      .catch(next);
+  }
 }
 
 function updateRoute(req, res, next) {

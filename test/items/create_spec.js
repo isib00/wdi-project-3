@@ -12,7 +12,7 @@ const userIds = [
   '5be9860fcb16d525543ceda1'
 ];
 
-const itemData = [
+const itemData =
   {
     // Created by Joe
     createdBy: userIds[1],
@@ -32,8 +32,7 @@ const itemData = [
         user: userIds[0]
       }
     ]
-  }
-];
+  };
 
 let token;
 
@@ -54,8 +53,6 @@ describe('Items CREATE', () => {
   });
 
   it('should return a 401 response without a token', done => {
-    // NOTE: This requires a change to the app! I've updated
-    // secureRoute to pass this test...
     api.post('/api/items')
       .end((err, res) => {
         expect(res.status).to.eq(401);
@@ -63,27 +60,52 @@ describe('Items CREATE', () => {
       });
   });
 
-  it('should return a 201 response', done => {
-    // NOTE: This test requires a change to the app!
-    // I've updated the CREATE route (see dessertController)
+  it('should return a 401 without a body', done => {
     api.post('/api/items')
       .set('Authorization', `Bearer ${token}`)
-      .send(itemData)
       .end((err, res) => {
-        expect(res.status).to.eq(201);
+        expect(res.status).to.eq(401);
         done();
       });
   });
 
-  it('should return an object', done => {
+  it('should return the correct message when no body is sent', done => {
+    api.post('/api/items')
+      .set('Authorization', `Bearer ${token}`)
+      .end((err, res) => {
+        expect(res.body.message).to.eq('no data given');
+        done();
+      });
+  });
+
+  it('should return an 200, with a valid body', done => {
+    api.post('/api/items')
+      .set('Authorization', `Bearer ${token}`)
+      .send(itemData)
+      .end((err, res) => {
+        expect(res.status).to.eq(200);
+        done();
+      });
+  });
+
+  it('should return an object if the body contains an object', done => {
+    api.post('/api/items')
+      .set('Authorization', `Bearer ${token}`)
+      .send(itemData)
+      .end((err, res) => {
+        expect(res.body).to.be.an('object');
+        done();
+      });
+  });
+
+  it('should return an object with the correct name', done => {
     api.post('/api/items')
       .set('Authorization', `Bearer ${token}`)
       .send(itemData)
       .end((err, res) => {
         // test the type of res.body
-        expect(res).to.be.an('object');
+        expect(res.body.itemName).to.eq(itemData.itemName);
         done();
       });
   });
-
 });

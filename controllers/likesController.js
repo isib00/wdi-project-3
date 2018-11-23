@@ -1,7 +1,6 @@
 const Item = require('../models/item');
 
 function like(req, res, next) {
-  console.log('LIKED!');
   Item
     .findById(req.params.itemId)
     .then(item => {
@@ -20,7 +19,6 @@ function like(req, res, next) {
 }
 
 function unlike(req, res, next) {
-  console.log('UNLIKED!');
   Item
     .findById(req.params.itemId)
     .then(item => {

@@ -37,10 +37,6 @@ itemSchema.virtual('likeCount')
     return this.likes.length;
   });
 
-itemSchema.virtual('firstLetter')
-  .get(function() {
-    return this.itemName[0];
-  });
 
 // include virtuals in res.json
 itemSchema.set('toJSON', {

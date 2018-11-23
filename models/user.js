@@ -11,7 +11,7 @@ const userSchema = mongoose.Schema({
   // we could improve this with maps:
   location: String,
   // we might do that after we have reached MVP:
-  // rating: String,
+  rating: [{ type: mongoose.Schema.ObjectId, ref: 'Users' }],
   //users can also comment on sellers, so that you can see the comments
   //about sellers on their individual show pages:
   comments: [
