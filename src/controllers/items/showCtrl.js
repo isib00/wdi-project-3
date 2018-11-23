@@ -31,14 +31,14 @@ function showCtrl($state, $scope, $http) {
     $http({
       method: 'POST',
       url: `/api/items/${$state.params.id}/like`
-    });
+    }).then(() => $state.reload());
   };
   $scope.createUnlikes = function() {
     console.log('unliked');
     $http({
       method: 'POST',
       url: `/api/items/${$state.params.id}/unlike`
-    });
+    }).then(() => $state.reload());
   };
   $scope.liked = function() {
     return $scope.item.likes.includes($scope.userId);

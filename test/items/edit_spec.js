@@ -34,7 +34,7 @@ const itemData =
     ]
   };
 
-let token;
+let token
 
 const itemId = '5bf6e31125ab69b642dc8626';
 

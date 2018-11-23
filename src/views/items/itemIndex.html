@@ -1,17 +1,15 @@
 
-<h1>Welcome back {{ username }}<h1>
-  <div ng-if="isAuthenticated()">
-  <!-- <p>Welcome back {{ username }}</p> -->
-</div>
+<!-- <h1 ng-if="isAuthenticated()">Welcome back {{ username }}<h1> -->
 
+<div id="itemindex">
 <section class="section">
-  <!-- <h2 class="title is-2 has-text-centered">All items</h2> -->
+
     <div class="field has-addons is-grouped">
       <div class="control is-expanded">
         <input id="input" placeholder="Search by anything you like..." type="text" class="input is-rounded" ng-model="$parent.searchBar">
       </div>
     </div>
-<p id="hot">Here's what's hot right now...</p>
+
 
   <div class="columns is-multiline">
     <div ng-repeat="item in items | filter: searchBar" class="column is-2">
@@ -24,3 +22,4 @@
     </div>
   </div>
 </section>
+</div>

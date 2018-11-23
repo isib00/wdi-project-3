@@ -6,26 +6,58 @@
     <link rel="shortcut icon"  href="https://tokenmarket.net/blockchain-static/ethereum/assets/orca-alliance/logo_big.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Permanent+Marker" rel="stylesheet">
 
     <title>Orca</title>
 
   </head>
   <body id="body" ng-controller="mainCtrl">
+
+
+
     <div>
     <nav  id="nav" class="navbar-end  columns">
+      <a id="orca" ng-if="isAuthenticated()" class=" navbar-item column-is-2">ORCA</a>
       <a ui-sref="home" class="navbar-item column-is-2">Home</a>
       <a ui-sref="itemsIndex" class="navbar-item column-is-2">Clothing & Stuff</a>
       <a ui-sref="contact" class="navbar-item column-is-2">Contact</a>
       <a ui-sref="about" class="navbar-item column-is-2">About</a>
       <a ng-if="isAuthenticated()" ui-sref="itemsNew" class="navbar-item column-is-1">Upload an item</a>
-      <a ng-if="!isAuthenticated()" ui-sref="register" class="navbar-item column-is-1">Register</a>
-      <a id="marginado" ng-if="!isAuthenticated()" ui-sref="login" class="navbar-item column-is-1">Log in</a>
-      <a ng-if="isAuthenticated()" ui-sref="userShow({id: userId })" class="navbar-item column-is-1" >Profile</a>
-      <a id="marginado"ng-if="isAuthenticated()" class="navbar-item column-is-1" ng-click="handleLogout()" >Log out {{ username }}</a>
-    </nav>
-    <flash-message id="flashMessage"></flash-message>
-  </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+                  <a id="margin" class="navbar-link navbar-item">
+                    Account
+                  </a>
+                  <div class="navbar-dropdown">
+                    <a ng-if="!isAuthenticated()" class="navbar-item" ui-sref="register">
+                      Register
+                    </a>
 
+                    <a ng-if="!isAuthenticated()" class="navbar-item" ui-sref="login">
+                      Log In
+                    </a>
+
+                    <a ng-if="isAuthenticated()" ui-sref="userShow({id: userId })" class="navbar-item column-is-1" >Profile</a>
+
+                    <a ng-if="isAuthenticated()" class="navbar-item" ng-click="handleLogout()">
+                      Log Out {{ username }}
+                    </a>
+                  </div>
+                </div>
+      <!-- <a id="marginado" ng-if="!isAuthenticated()" ui-sref="login" class="navbar-item column-is-1">Log in</a> -->
+      <!-- <a ng-if="!isAuthenticated()" ui-sref="register" class="navbar-item column-is-1">Register</a> -->
+      <!-- <a id="marginado"ng-if="isAuthenticated()" class="navbar-item column-is-1" ng-click="handleLogout()" >Log out {{ username }}</a> -->
+    </nav>
+
+
+
+
+
+
+
+
+
+  </div>
+<flash-message id="flashMessage"></flash-message>
     <div ui-view></div>
 
 
