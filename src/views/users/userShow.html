@@ -1,45 +1,22 @@
-
-<<<<<<< HEAD
-  <button ng-if="user.id === userId" class="button is-rounded" ui-sref="itemsEdit({ id: item._id })">Edit</button>
-  <button ng-if="user.id === userId"  class="button is-rounded" ng-click="handleDelete(item._id)">DELETE</button>
-=======
 <div id="usershow">
-<section class="section2">
->>>>>>> development
-
-  <h1 class="title-is-1" id="username">{{ user.username }}'s Profile</h1>
-  <h3 id="jk">Your items for sale:</h3>
-  <!-- <div id="abc" class="card"> -->
+  <section class="section2">
+    <h1 class="title-is-1" id="username">{{ user.username }}'s Profile</h1>
+    <h3 id="jk">Your items for sale:</h3>
     <div id="space" class="columns is-multiline">
-    <div ng-repeat="item in user.itemsForSale" class="column is-2">
-      <a ui-sref="itemsEdit({ id: item._id })">
-      <h2 id="useritemname">
-        {{ item.itemName }}
-      </h2>
-    <!-- <div class="field has-addons is-grouped"> -->
-    <figure class="image">
-    <img ng-src="{{ item.imageUrl}}" alt="{{ item.itemName }}">
-    </figure>
-      <!-- <div class="control is-expanded"> -->
-        <!-- <input id="input" placeholder="Search by anything you like..." type="text" class="input is-rounded" ng-model="$parent.searchBar"> -->
-<div class="editdelete">
-
-        <button  id="buble2" class="button is-link" ng-if="user.id === userId"  ui-sref="itemsEdit({ id: item._id })">Edit</button>
-      <!-- </div> -->
-      <button id="delete" class="button is-link" ng-if="user.id === userId"  ng-click="handleDelete(item._id)">Delete</button>
-    <!-- </div> -->
-  </div>
-
-
-  <!-- <div class="columns is-multiline"> -->
-    <!-- <div ng-repeat="item in items | filter: searchBar" class="column is-2"> -->
-      <!-- <a ui-sref="itemsShow({ id: item._id })"> -->
-        <!-- <h3 id="pricetag" class="subtitle is-4">£{{ item.price}}</h3> -->
-        <!-- <figure class="image">
-          <img ng-src="{{ item.imageUrl }}" alt="{{ item.itemName }}">
-        </figure> -->
-      </a>
+      <div ng-repeat="item in user.itemsForSale" class="column is-2">
+        <a ui-sref="itemsEdit({ id: item._id })">
+          <h2 id="useritemname">
+            {{ item.itemName }}
+          </h2>
+          <figure class="image">
+            <img ng-src="{{ item.imageUrl}}" alt="{{ item.itemName }}">
+          </figure>
+          <div class="editdelete">
+            <button  id="buble2" class="button is-link" ng-if="user.id === userId"  ui-sref="itemsEdit({ id: item._id })">Edit</button>
+            <button id="delete" class="button is-link" ng-if="user.id === userId"  ng-click="handleDelete(item._id)">Delete</button>
+          </div>
+        </a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 </div>
