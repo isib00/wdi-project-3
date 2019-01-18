@@ -58,35 +58,35 @@ Web Site Heroku. GitHub Repo.
 
 Homepage and Indexpage
 
-![HOME and INDEX](screenshots/Screen Shot 2019-01-18 at 11.20.52.png)
+![HOME and INDEX](screenshots/ScreenShot2019-01-18at11.20.52.png)
 
 Contact page and About page.
 
-![contact and about](screenshots/Screen Shot 2019-01-18 at 11.24.42.png)
+![contact and about](screenshots/ScreenShot2019-01-18at11.24.42.png)
 
 Login and register forms.
 
-![login and register](screenshots/Screen Shot 2019-01-18 at 11.28.36.png)
+![login and register](screenshots/ScreenShot2019-01-18at11.28.36.png)
 
-![homepage](screenshots/Screen Shot 2019-01-18 at 11.31.11.png)
+![homepage](screenshots/ScreenShot2019-01-18at11.31.11.png)
 
-![Index page](screenshots/Screen Shot 2019-01-18 at 11.31.44.png)
+![Index page](screenshots/ScreenShot2019-01-18at11.31.44.png)
 
-![contact](screenshots/Screen Shot 2019-01-18 at 11.32.12.png)
+![contact](screenshots/ScreenShot2019-01-18at11.32.12.png)
 
-![about](screenshots/Screen Shot 2019-01-18 at 11.32.44.png)
-![about2](screenshots/Screen Shot 2019-01-18 at 11.33.13.png)
-![about3](screenshots/Screen Shot 2019-01-18 at 11.33.22.png)
+![about](screenshots/ScreenShot2019-01-18at11.32.44.png)
+![about2](screenshots/Screen Shot2019-01-18at11.33.13.png)
+![about3](screenshots/ScreenShot2019-01-18at11.33.22.png)
 
-![login](screenshots/Screen Shot 2019-01-18 at 11.34.46.png)
+![login](screenshots/ScreenShot2019-01-18at11.34.46.png)
 
-![register](screenshots/Screen Shot 2019-01-18 at 11.34.46.png)
+![register](screenshots/ScreenShot2019-01-18at11.34.46.png)
 
 # Process
 
 After a brainstorm in group we decided that we would like to make an app which would be community focussed. After creating some initial wireframes we mapped out our project using Trello.
 
-![trello](screenshots/Screen Shot 2019-01-18 at 11.36.24.png)
+![trello](screenshots/ScreenShot2019-01-18at11.36.24.png)
 
 We decided to work together on the backend of the app before we moved onto the front end. We also identified what features where part of our MVP (Minimum Viable Product) and which would be nice to have but not essential.
 
